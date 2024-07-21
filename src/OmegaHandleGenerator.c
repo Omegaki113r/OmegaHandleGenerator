@@ -10,7 +10,7 @@
  * File Created: Sunday, 21st July 2024 6:28:31 pm
  * Author: Omegaki113r (omegaki113r@gmail.com)
  * -----
- * Last Modified: Monday, 22nd July 2024 1:57:17 am
+ * Last Modified: Monday, 22nd July 2024 2:02:14 am
  * Modified By: Omegaki113r (omegaki113r@gmail.com)
  * -----
  * Copyright 2024 - 2024 0m3g4ki113r, Xtronic
@@ -68,12 +68,14 @@ uint64_t OmegaHandleGenerator_create_handle()
         generated_handle = 0;
     }
 response:
+    OMEGA_LOGV("Generated Handle: %llu", generated_handle);
     OMEGA_LOGV("Vector Size: %d", Vector_size(&handles));
     return generated_handle;
 }
 
 bool OmegaHandleGenerator_delete_handle(uint64_t in_handle)
 {
+    OMEGA_LOGV("Deleting Handle: %llu", in_handle);
     OMEGA_LOGV("Vector Size: %d", Vector_size(&handles));
     c_foreach(handle_iterator, Vector, handles)
     {
