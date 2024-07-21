@@ -10,7 +10,7 @@
  * File Created: Sunday, 21st July 2024 6:28:31 pm
  * Author: Omegaki113r (omegaki113r@gmail.com)
  * -----
- * Last Modified: Monday, 22nd July 2024 2:13:17 am
+ * Last Modified: Monday, 22nd July 2024 2:55:22 am
  * Modified By: Omegaki113r (omegaki113r@gmail.com)
  * -----
  * Copyright 2024 - 2024 0m3g4ki113r, Xtronic
@@ -81,7 +81,14 @@
 
 #define MAX_ITERATION_AMOUNT 100
 
+#if ESP_PLATFORM && OMEGA_ESP_HARDWARE_GEN
+#include <esp_random.h>
+#define RAND() (esp_random() & 0x7fff)
+#elseif OMEGA_STC_RANDOM_GEN
+#define RAND() (crand() & 0x7fff)
+#else
 #define RAND() (rand() & 0x7fff)
+#endif
 
 #define i_TYPE Vector, u64
 #include <vec.h>

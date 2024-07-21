@@ -24,4 +24,14 @@ menu "OmegaHandleGenerator Configuration"
         default "n"
         help
             This is used to enable or disable error logs
+    choice
+        prompt "What generator to use"
+        default OMEGA_LIBC_RANDOM_GEN
+        config OMEGA_ESP_HARDWARE_GEN
+            bool "Use ESP hardware random number generator"
+        config OMEGA_STC_RANDOM_GEN
+            bool "Use STC library generator"
+        config OMEGA_LIBC_RANDOM_GEN
+            bool "Use LIB C generator"
+    endchoice
 endmenu
