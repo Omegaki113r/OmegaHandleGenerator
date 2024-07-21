@@ -1,0 +1,31 @@
+{
+    "psi-header.variables": [
+        [
+            "projectname",
+            "OmegaHandleGenerator"
+        ],
+        [
+            "projectCreationYear",
+            "2024"
+        ]
+    ],
+    "files.associations": {
+        "array": "c",
+        "initializer_list": "c",
+        "type_traits": "c",
+        "xutility": "c",
+        "bitset": "c",
+        "string_view": "c",
+        "format": "c",
+        "span": "c",
+        "regex": "c",
+        "memory_resource": "c",
+        "ratio": "c",
+        "omegafilesystemcontroller_priv.h": "c",
+        "omegafilesystemcontroller.h": "c",
+        "omegaloggingsystemcontroller.h": "c",
+        "*.tcc": "c",
+        "esp_heap_caps.h": "c",
+        "cstdlib": "c"
+    },
+}
