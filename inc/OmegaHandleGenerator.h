@@ -10,7 +10,7 @@
  * File Created: Sunday, 21st July 2024 6:24:30 pm
  * Author: Omegaki113r (omegaki113r@gmail.com)
  * -----
- * Last Modified: Sunday, 21st July 2024 6:38:23 pm
+ * Last Modified: Monday, 22nd July 2024 1:18:24 am
  * Modified By: Omegaki113r (omegaki113r@gmail.com)
  * -----
  * Copyright 2024 - 2024 0m3g4ki113r, Xtronic
@@ -31,6 +31,7 @@ extern "C"
 #include <stdint.h>
 
     uint64_t OmegaHandleGenerator_create_handle();
+    bool OmegaHandleGenerator_delete_handle(uint64_t);
 
 #ifdef __cplusplus
 }

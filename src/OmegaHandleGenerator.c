@@ -10,7 +10,7 @@
  * File Created: Sunday, 21st July 2024 6:28:31 pm
  * Author: Omegaki113r (omegaki113r@gmail.com)
  * -----
- * Last Modified: Monday, 22nd July 2024 12:41:03 am
+ * Last Modified: Monday, 22nd July 2024 1:23:21 am
  * Modified By: Omegaki113r (omegaki113r@gmail.com)
  * -----
  * Copyright 2024 - 2024 0m3g4ki113r, Xtronic
@@ -18,6 +18,8 @@
  * HISTORY:
  * Date      	By	Comments
  * ----------	---	---------------------------------------------------------
+ *
+ * 22-07-2024	0m3g4	OmegaHandleGenerator_create_handle and OmegaHandleGenerator_delete_handle added
  */
 
 #include "OmegaHandleGenerator.h"
@@ -66,4 +68,17 @@ uint64_t OmegaHandleGenerator_create_handle()
     }
 response:
     return generated_handle;
+}
+
+bool OmegaHandleGenerator_delete_handle(uint64_t in_handle)
+{
+    c_foreach(handle_iterator, Vector, handles)
+    {
+        if (*handle_iterator.ref == in_handle)
+        {
+            vecFileHandles_erase_at(&handles, in_handle);
+            return true;
+        }
+    }
+    return false;
 }
