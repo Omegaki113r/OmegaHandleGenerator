@@ -1,0 +1,27 @@
+menu "OmegaHandleGenerator Configuration"
+    config OMEGA_HANDLE_GENERATOR_VERBOSE
+        bool "Enable Handle Generator Verbose logs"
+        default "n"
+        help
+            This is used to enable or disable verbose logs
+    config OMEGA_HANDLE_GENERATOR_DEBUG
+        bool "Enable Handle Generator Debug logs"
+        default "n"
+        help
+            This is used to enable or disable debug logs
+    config OMEGA_HANDLE_GENERATOR_INFO
+        bool "Enable Handle Generator Info logs"
+        default "n"
+        help
+            This is used to enable or disable info logs
+    config OMEGA_HANDLE_GENERATOR_WARN
+        bool "Enable Handle Generator Warn logs"
+        default "n"
+        help
+            This is used to enable or disable warn logs
+    config OMEGA_HANDLE_GENERATOR_ERROR
+        bool "Enable Handle Generator Error logs"
+        default "n"
+        help
+            This is used to enable or disable error logs
+endmenu
